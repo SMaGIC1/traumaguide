@@ -4,205 +4,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TraumaGuide is an independent orthopaedic trauma education platform for surgeons, theatre nurses and healthcare professionals.">
-<title>TraumaGuide | Orthopaedic Education</title>
+<meta name="description" content="TraumaGuide orthopaedic trauma procedures education. Learn about fractures, fixation principles, anatomy and theatre preparation.">
+<meta name="theme-color" content="#10243a">
+<title>Trauma Procedures | TraumaGuide</title>
+
 <style>
 :root {
-  --navy: #10243a;
-  --blue: #176b87;
-  --teal: #19a69a;
-  --light: #f3f7fa;
-  --white: #ffffff;
-  --text: #243449;
+  --navy:#10243a;
+  --blue:#176b87;
+  --teal:#19a69a;
+  --light:#f3f7fa;
+  --white:#fff;
+  --text:#26384b;
+  --muted:#65778a;
 }
-* { box-sizing: border-box; }
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  background: var(--light);
-  line-height: 1.6;
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  background:var(--light);
+  line-height:1.65;
 }
 header {
-  background: var(--navy);
-  color: white;
-  padding: 18px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  background:var(--navy);
+  color:white;
+  padding:17px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
 }
-.logo { font-size: 25px; font-weight: bold; }
-.logo span { color: #35c5b5; }
-nav { display: flex; gap: 18px; flex-wrap: wrap; }
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
+.logo {font-size:24px;font-weight:bold}
+.logo span {color:#35c5b5}
+nav {display:flex;gap:15px;flex-wrap:wrap}
+nav a {color:white;text-decoration:none;font-size:13px}
+nav a:hover {color:#35c5b5}
 .hero {
-  background: linear-gradient(120deg,#10243a,#176b87);
-  color: white;
-  padding: 75px 7%;
+  background:linear-gradient(120deg,#10243a,#176b87);
+  color:white;
+  padding:55px 7%;
+}
+.eyebrow {
+  color:#65dfd0;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
 }
 .hero h1 {
-  font-size: clamp(34px,6vw,55px);
-  max-width: 750px;
-  line-height: 1.15;
-  margin: 0 0 20px;
+  font-size:clamp(34px,6vw,52px);
+  line-height:1.15;
+  margin:12px 0;
 }
-.hero p {
-  max-width: 650px;
-  color: #dcebf1;
-  font-size: 17px;
-}
+.hero p {max-width:680px;color:#e0edf2}
 .button {
-  display: inline-block;
-  background: var(--teal);
-  color: white;
-  padding: 13px 23px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
+  display:inline-block;
+  background:var(--teal);
+  color:white;
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:12px;
 }
-section { padding: 55px 7%; }
-.section-heading { text-align: center; margin-bottom: 32px; }
-.section-heading h2 { color: var(--navy); font-size: 30px; }
+section {padding:45px 7%}
+.heading {margin-bottom:25px}
+.heading h2 {color:var(--navy);font-size:28px;margin-bottom:5px}
+.heading p {color:var(--muted);margin-top:0}
+.intro {
+  background:white;
+  border-left:4px solid var(--teal);
+  padding:20px;
+  border-radius:7px;
+  margin-bottom:28px;
+}
+.search {
+  width:100%;
+  padding:14px;
+  border:1px solid #ccd8e1;
+  border-radius:7px;
+  font-size:16px;
+  margin:0 0 22px;
+}
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:17px;
 }
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 3px 15px #10243a12;
-  border-top: 4px solid var(--teal);
+  background:white;
+  border-radius:9px;
+  padding:20px;
+  border-top:4px solid var(--teal);
+  box-shadow:0 3px 12px #10243a0d;
 }
-.card h3 { color: var(--navy); }
-.card a {
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: none;
+.card h3 {color:var(--navy);margin:7px 0}
+.card p {color:var(--muted);font-size:14px}
+.tag {
+  display:inline-block;
+  background:#e2f4f1;
+  color:#147c72;
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
 }
-.about {
-  background: white;
-  text-align: center;
+.card button {
+  background:var(--navy);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:11px 15px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:bold;
 }
-.about p { max-width: 750px; margin: auto; }
+.card button:hover {background:var(--blue)}
+.details {
+  display:none;
+  margin-top:16px;
+  border-top:1px solid #e2e9ee;
+  padding-top:12px;
+}
+.details.open {display:block}
+.details h4 {color:var(--blue);margin-bottom:3px}
+.details ul {padding-left:20px;font-size:14px}
+.details p {font-size:14px}
+.info {
+  background:#e7f1f6;
+  padding:18px;
+  border-radius:7px;
+  margin-top:25px;
+}
 .notice {
-  background: #e5f3f4;
-  border-left: 4px solid var(--teal);
-  padding: 18px;
-  border-radius: 5px;
+  background:#fff6e5;
+  border-left:4px solid #d69b36;
+  padding:17px;
+  border-radius:6px;
+  font-size:13px;
 }
 footer {
-  background: var(--navy);
-  color: white;
-  padding: 30px 7%;
-  text-align: center;
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:30px 7%;
 }
-footer p { color: #c8d8e3; font-size: 13px; }
+footer p {font-size:12px;color:#c8d8e3}
+.hidden {display:none}
 @media(max-width:600px) {
-  header { justify-content: center; }
-  nav { justify-content: center; }
-  .hero { padding: 55px 7%; }
+  header {justify-content:center}
+  nav {justify-content:center}
+  .hero {padding:45px 7%}
+  section {padding:35px 6%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">Trauma<span>Guide</span></div>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#education">Education</a>
-    <a href="#theatre">Theatre</a>
+    <a href="index.html">Home</a>
+    <a href="#procedures">Procedures</a>
+    <a href="#principles">Principles</a>
     <a href="#about">About</a>
   </nav>
 </header>
 
 <main>
-<div class="hero" id="home">
-  <h1>Advancing Orthopaedic Trauma Knowledge.</h1>
+
+<div class="hero">
+  <div class="eyebrow">TraumaGuide Education Library</div>
+  <h1>Orthopaedic Trauma Procedures</h1>
   <p>
-    An independent educational platform supporting surgeons,
-    theatre nurses, students and healthcare professionals
-    through accessible orthopaedic trauma learning.
+    Explore common orthopaedic trauma procedures,
+    fracture patterns, fixation concepts and theatre
+    preparation through structured educational resources.
   </p>
-  <a class="button" href="#education">Explore Learning</a>
+  <a href="#procedures" class="button">Explore Procedures</a>
 </div>
 
-<section id="education">
-  <div class="section-heading">
-    <h2>Explore Orthopaedic Education</h2>
-    <p>Build your knowledge. Strengthen your understanding.</p>
+<section id="procedures">
+
+  <div class="heading">
+    <h2>Procedure Learning Library</h2>
+    <p>Select a topic to explore its educational overview.</p>
   </div>
+
+  <div class="intro">
+    <strong>Learning pathway</strong>
+    <p>
+      Start with fracture anatomy and classification.
+      Progress to fixation principles, implant concepts
+      and theatre preparation considerations.
+    </p>
+  </div>
+
+  <input
+    type="search"
+    class="search"
+    id="search"
+    placeholder="Search procedures, bones or fractures..."
+    aria-label="Search procedure topics"
+  >
+
+  <div class="cards" id="procedureCards">
+
+    <article class="card" data-search="femur femoral shaft proximal distal fracture">
+      <span class="tag">Lower limb</span>
+      <h3>Femoral Fractures</h3>
+      <p>Explore femoral anatomy, fracture patterns and general fixation concepts.</p>
+      <button onclick="toggleDetails('femur',this)">Explore topic +</button>
+      <div class="details" id="femur">
+        <h4>Learning objectives</h4>
+        <ul>
+          <li>Identify the proximal, shaft and distal femur.</li>
+          <li>Understand common femoral fracture classifications.</li>
+          <li>Recognise broad fixation concepts.</li>
+          <li>Understand the importance of associated injuries.</li>
+        </ul>
+        <h4>Educational concepts</h4>
+        <p>
+          Femoral fractures may involve the proximal femur,
+          femoral shaft or distal femur. Treatment planning
+          depends on fracture location, morphology, patient
+          factors and associated injuries.
+        </p>
+        <h4>Theatre learning</h4>
+        <p>
+          Study positioning principles, imaging requirements,
+          implant familiarity and instrument preparation
+          according to the planned procedure and local protocol.
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-search="tibia tibial shaft plateau pilon lower leg">
+      <span class="tag">Lower limb</span>
+      <h3>Tibial Fractures</h3>
+      <p>Learn about tibial shaft, plateau and distal tibial fracture patterns.</p>
+      <button onclick="toggleDetails('tibia',this)">Explore topic +</button>
+      <div class="details" id="tibia">
+        <h4>Learning objectives</h4>
+        <ul>
+          <li>Understand proximal, shaft and distal tibial anatomy.</li>
+          <li>Explore common fracture classifications.</li>
+          <li>Understand broad fixation options.</li>
+          <li>Recognise soft tissue considerations.</li>
+        </ul>
+        <h4>Educational concepts</h4>
+        <p>
+          Tibial injuries range from shaft fractures to
+          complex articular injuries involving the plateau
+          or distal tibial surface. Soft tissue assessment
+          is an important part of treatment planning.
+        </p>
+        <h4>Theatre learning</h4>
+        <p>
+          Review positioning, imaging access, implant
+          selection concepts and equipment preparation
+          in accordance with the surgical plan.
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-search="humerus shoulder upper arm proximal shaft distal fracture">
+      <span class="tag">Upper limb</span>
+      <h3>Humeral Fractures</h3>
+      <p>Explore proximal humerus, shaft and distal humerus injuries.</p>
+      <button onclick="toggleDetails('humerus',this)">Explore topic +</button>
+      <div class="details" id="humerus">
+        <h4>Learning objectives</h4>
+        <ul>
+          <li>Identify the proximal, shaft and distal humerus.</li>
+          <li>Understand common fracture patterns.</li>
+          <li>Explore broad fixation principles.</li>
+          <li>Learn relevant neurovascular anatomy.</li>
+        </ul>
+        <h4>Educational concepts</h4>
+        <p>
+          Humeral fractures vary according to anatomical
+          location and complexity. Assessment includes
+          fracture characteristics, joint involvement and
+          relevant neurovascular structures.
+        </p>
+        <h4>Theatre learning</h4>
+        <p>
+          Review patient positioning, imaging access,
+          implant familiarity and the importance of
+          understanding the relevant anatomy.
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-search="ankle malleolar pilon distal tibia fracture">
+      <span class="tag">Lower limb</span>
+      <h3>Ankle Fractures</h3>
+      <p>Understand ankle anatomy, malleolar fractures and stability concepts.</p>
+      <button onclick="toggleDetails('ankle',this)">Explore topic +</button>
+      <div class="details" id="ankle">
+        <h4>Learning objectives</h4>
+        <ul>
+          <li>Identify the medial, lateral and posterior malleoli.</li>
+          <li>Understand common ankle fracture classifications.</li>
+          <li>Explore ankle stability concepts.</li>
+          <li>Recognise associated soft tissue injuries.</li>
+        </ul>
+        <h4>Educational concepts</h4>
+        <p>
+          Ankle fractures may involve one or multiple
+          malleoli. Assessment considers fracture morphology,
+          joint congruency, stability and associated injuries.
+        </p>
+        <h4>Theatre learning</h4>
+        <p>
+          Study positioning, imaging, implant concepts
+          and equipment preparation for the planned
+          procedure.
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-search="forearm radius ulna fracture both bones">
+      <span class="tag">Upper limb</span>
+      <h3>Forearm Fractures</h3>
+      <p>Explore radius and ulna anatomy and forearm fracture concepts.</p>
+      <button onclick="toggleDetails('forearm',this)">Explore topic +</button>
+      <div class="details" id="forearm">
+        <h4>Learning objectives</h4>
+        <ul>
+          <li>Identify radius and ulna anatomy.</li>
+          <li>Understand common forearm fracture patterns.</li>
+          <li>Explore the importance of forearm rotation.</li>
+          <li>Recognise associated joint injuries.</li>
+        </ul>
+        <h4>Educational concepts</h4>
+        <p>
+          Forearm injuries may affect the radius, ulna
+          or both bones. Understanding alignment,
+          rotation and associated joint relationships
+          is important in fracture education.
+        </p>
+        <h4>Theatre learning</h4>
+        <p>
+          Review relevant anatomy, positioning,
+          imaging requirements and implant concepts.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <p id="noResults" class="hidden">No matching topics found. Try another search.</p>
+
+</section>
+
+<section id="principles" style="background:white">
+  <div class="heading">
+    <h2>Core Trauma Learning Principles</h2>
+    <p>Knowledge areas that support understanding across procedures.</p>
+  </div>
+
   <div class="cards">
     <div class="card">
-      <h3>Bone Anatomy</h3>
-      <p>Explore the anatomy of bones, joints and the musculoskeletal system.</p>
-      <a href="#about">Explore topics →</a>
+      <h3>Fracture Classification</h3>
+      <p>Understand how fractures are described and categorised.</p>
     </div>
     <div class="card">
-      <h3>Fracture Education</h3>
-      <p>Learn fracture terminology, classifications and fundamental principles.</p>
-      <a href="#about">Explore topics →</a>
+      <h3>Fixation Concepts</h3>
+      <p>Explore plates, screws, intramedullary nails and fixation principles.</p>
     </div>
     <div class="card">
-      <h3>Trauma Procedures</h3>
-      <p>Understand common orthopaedic trauma procedures and fixation concepts.</p>
-      <a href="#about">Explore topics →</a>
+      <h3>Bone Healing</h3>
+      <p>Learn about primary and secondary bone healing concepts.</p>
     </div>
     <div class="card">
-      <h3>Implant Education</h3>
-      <p>Discover orthopaedic implants, their terminology and general applications.</p>
-      <a href="#about">Explore topics →</a>
+      <h3>Soft Tissue Assessment</h3>
+      <p>Understand the relevance of soft tissue condition in trauma care.</p>
     </div>
   </div>
 </section>
 
-<section id="theatre">
-  <div class="section-heading">
-    <h2>Theatre & Surgical Team Education</h2>
-    <p>Learning resources for the people behind every procedure.</p>
+<section id="about">
+  <div class="heading">
+    <h2>About This Learning Module</h2>
+    <p>Independent orthopaedic trauma education.</p>
   </div>
-  <div class="cards">
-    <div class="card">
-      <h3>Instrument Knowledge</h3>
-      <p>Understand common orthopaedic surgical instruments and their purposes.</p>
-    </div>
-    <div class="card">
-      <h3>Theatre Preparation</h3>
-      <p>Explore equipment terminology, preparation concepts and checklists.</p>
-    </div>
-    <div class="card">
-      <h3>Surgical Team Learning</h3>
-      <p>Educational resources for surgeons, nurses and theatre professionals.</p>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="section-heading">
-    <h2>About TraumaGuide</h2>
-  </div>
-  <p>
-    TraumaGuide aims to make orthopaedic trauma education
-    more accessible through structured learning resources,
-    practical knowledge and professional development.
-  </p>
-  <br>
   <div class="notice">
-    <strong>Educational disclaimer:</strong>
-    TraumaGuide is an independent educational initiative.
-    Its content is for learning purposes and is not a substitute
-    for clinical training, professional judgement or institutional protocols.
+    <strong>Clinical disclaimer:</strong>
+    This material is intended for general educational
+    purposes. It does not provide patient-specific treatment
+    recommendations or substitute for formal clinical
+    training, specialist supervision, current evidence,
+    manufacturer instructions or institutional protocols.
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -211,6 +412,31 @@ footer p { color: #c8d8e3; font-size: 13px; }
   <p>Independent medical education initiative.</p>
   <p>© 2026 TraumaGuide. All rights reserved.</p>
 </footer>
+
+<script>
+function toggleDetails(id,button) {
+  const panel = document.getElementById(id);
+  const isOpen = panel.classList.toggle("open");
+  button.textContent = isOpen ? "Close topic −" : "Explore topic +";
+}
+
+const search = document.getElementById("search");
+const cards = document.querySelectorAll(".card[data-search]");
+const noResults = document.getElementById("noResults");
+
+search.addEventListener("input",function() {
+  const term = search.value.toLowerCase().trim();
+  let count = 0;
+
+  cards.forEach(function(card) {
+    const matches = card.dataset.search.includes(term);
+    card.classList.toggle("hidden",!matches);
+    if(matches) count++;
+  });
+
+  noResults.classList.toggle("hidden",count !== 0);
+});
+</script>
 
 </body>
 </html>
