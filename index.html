@@ -1,43 +1,216 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243a">
-<meta name="description" content="TraumaGuide — orthopaedic trauma learning for surgeons, students and theatre teams.">
-<link rel="manifest" href="manifest.json"><title>TraumaGuide | Orthopaedic learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TraumaGuide is an independent orthopaedic trauma education platform for surgeons, theatre nurses and healthcare professionals.">
+<title>TraumaGuide | Orthopaedic Education</title>
 <style>
-:root{--navy:#10243a;--blue:#2463a6;--sky:#eaf2fa;--ink:#172536;--muted:#66778a;--line:#dce5ed;--paper:#f5f8fb;--white:#fff;--green:#187a62;--shadow:0 12px 30px rgba(16,36,58,.08)}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}.top{background:var(--navy);color:white;padding:16px max(20px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.2px;font-size:20px}.logo{width:36px;height:36px;border-radius:11px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:22px}.top small{color:#b9c9d9}.wrap{max-width:1120px;margin:auto;padding:26px 20px 60px}.hero{background:linear-gradient(120deg,#10243a,#1d4e7d);color:#fff;border-radius:22px;padding:32px;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center;box-shadow:var(--shadow)}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:11px;color:#c6d8e9;font-weight:800}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:10px 0}.hero p{color:#d9e6f2;max-width:620px;margin:0}.hero-art{justify-self:end;width:min(220px,100%);aspect-ratio:1;border:1px solid #6e8ba8;border-radius:28px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:88px}.searchbar{display:flex;gap:10px;margin:22px 0}.searchbar input{flex:1;min-width:0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;outline-color:var(--blue)}.pill{border:0;border-radius:12px;padding:12px 16px;background:var(--blue);color:white;font-weight:700;cursor:pointer}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;color:var(--muted);font-weight:700;cursor:pointer}.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:23px}.section-head p{margin:3px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:left;cursor:pointer;transition:.15s;box-shadow:0 2px 8px rgba(16,36,58,.025)}.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#a9c4df}.card .ico{width:42px;height:42px;border-radius:12px;background:var(--sky);display:grid;place-items:center;font-size:22px;margin-bottom:12px}.card h3{margin:0 0 5px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}.tag{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;color:var(--blue);background:var(--sky);padding:4px 8px;border-radius:99px}.notice{margin:24px 0;padding:14px 16px;border-left:4px solid #d49a37;background:#fff8e9;border-radius:9px;color:#664b1e;font-size:13px}.module{display:none;background:white;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:20px}.module.show{display:block}.back{border:0;background:transparent;color:var(--blue);font-weight:800;padding:0;cursor:pointer}.module h2{font-size:28px;margin:12px 0 2px}.sub{color:var(--muted);margin:0 0 18px}.module-nav{display:flex;gap:7px;overflow:auto;padding:4px 0 14px;border-bottom:1px solid var(--line)}.module-nav button{white-space:nowrap;border:1px solid var(--line);border-radius:9px;background:#fff;padding:8px 11px;color:var(--muted);cursor:pointer}.module-nav button.active{background:var(--sky);border-color:#a9c4df;color:var(--navy);font-weight:800}.content{padding:18px 2px;max-width:850px}.content h3{margin:0 0 8px;font-size:20px}.content p,.content li{color:#3d4e60}.content ul{padding-left:20px}.callout{background:#f1f6fb;border:1px solid #d9e7f3;padding:14px;border-radius:12px;margin:14px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:#f7f9fc;border:1px solid var(--line);padding:14px;border-radius:12px}.mini b{display:block;margin-bottom:4px}.footer{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;color:var(--muted);font-size:12px}.empty{padding:24px;color:var(--muted);text-align:center;grid-column:1/-1}@media(max-width:760px){.hero{grid-template-columns:1fr;padding:24px}.hero-art{display:none}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.top small{display:none}}@media(max-width:460px){.grid{grid-template-columns:1fr}.wrap{padding:18px 14px 44px}.hero{border-radius:17px}}
-</style></head>
+:root {
+  --navy: #10243a;
+  --blue: #176b87;
+  --teal: #19a69a;
+  --light: #f3f7fa;
+  --white: #ffffff;
+  --text: #243449;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.6;
+}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo { font-size: 25px; font-weight: bold; }
+.logo span { color: #35c5b5; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.hero {
+  background: linear-gradient(120deg,#10243a,#176b87);
+  color: white;
+  padding: 75px 7%;
+}
+.hero h1 {
+  font-size: clamp(34px,6vw,55px);
+  max-width: 750px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+.hero p {
+  max-width: 650px;
+  color: #dcebf1;
+  font-size: 17px;
+}
+.button {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  padding: 13px 23px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+section { padding: 55px 7%; }
+.section-heading { text-align: center; margin-bottom: 32px; }
+.section-heading h2 { color: var(--navy); font-size: 30px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px #10243a12;
+  border-top: 4px solid var(--teal);
+}
+.card h3 { color: var(--navy); }
+.card a {
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+.about {
+  background: white;
+  text-align: center;
+}
+.about p { max-width: 750px; margin: auto; }
+.notice {
+  background: #e5f3f4;
+  border-left: 4px solid var(--teal);
+  padding: 18px;
+  border-radius: 5px;
+}
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 30px 7%;
+  text-align: center;
+}
+footer p { color: #c8d8e3; font-size: 13px; }
+@media(max-width:600px) {
+  header { justify-content: center; }
+  nav { justify-content: center; }
+  .hero { padding: 55px 7%; }
+}
+</style>
+</head>
 <body>
-<header class="top"><div class="brand"><span class="logo">✚</span> TraumaGuide</div><small>Orthopaedic learning • Theatre readiness</small></header>
-<main class="wrap">
-<section class="hero"><div><div class="eyebrow">A learning platform for the trauma team</div><h1>Orthopaedic knowledge.<br>Theatre readiness.</h1><p>Explore procedure concepts, anatomy, implants and instrument education in one organised learning space.</p></div><div class="hero-art" aria-hidden="true">🦴</div></section>
-<div class="searchbar"><input id="search" placeholder="Search procedures, anatomy or instruments…" aria-label="Search learning modules"><button class="pill" id="clear">Clear</button></div>
-<div class="tabs" role="tablist"><button class="tab active" data-filter="all">All learning</button><button class="tab" data-filter="surgeon">Surgeon Academy</button><button class="tab" data-filter="theatre">Theatre Academy</button><button class="tab" data-filter="anatomy">Anatomy Library</button></div>
-<section id="home"><div class="section-head"><div><h2>Explore learning modules</h2><p>Start with a topic relevant to your role.</p></div></div><div class="grid" id="cards"></div></section>
-<section class="module" id="module"><button class="back" id="back">← Back to library</button><h2 id="moduleTitle">Tibial intramedullary nailing</h2><p class="sub" id="moduleSub">Foundational educational module</p><div class="module-nav" id="moduleNav"></div><article class="content" id="moduleContent"></article></section>
-<div class="notice"><b>Educational use only.</b> TraumaGuide is an independent prototype, not an official manufacturer platform. Content is introductory and must not be used as instructions for patient care. Always follow current manufacturer instructions for use, local protocols, clinical supervision and professional judgement. Clinical content requires qualified review before publication.</div>
-<footer class="footer">TraumaGuide prototype • Version 0.1 • Independent educational concept. Manufacturer names, trademarks, product imagery and proprietary materials are not used or endorsed here.</footer>
+
+<header>
+  <div class="logo">Trauma<span>Guide</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#theatre">Theatre</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <h1>Advancing Orthopaedic Trauma Knowledge.</h1>
+  <p>
+    An independent educational platform supporting surgeons,
+    theatre nurses, students and healthcare professionals
+    through accessible orthopaedic trauma learning.
+  </p>
+  <a class="button" href="#education">Explore Learning</a>
+</div>
+
+<section id="education">
+  <div class="section-heading">
+    <h2>Explore Orthopaedic Education</h2>
+    <p>Build your knowledge. Strengthen your understanding.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Bone Anatomy</h3>
+      <p>Explore the anatomy of bones, joints and the musculoskeletal system.</p>
+      <a href="#about">Explore topics →</a>
+    </div>
+    <div class="card">
+      <h3>Fracture Education</h3>
+      <p>Learn fracture terminology, classifications and fundamental principles.</p>
+      <a href="#about">Explore topics →</a>
+    </div>
+    <div class="card">
+      <h3>Trauma Procedures</h3>
+      <p>Understand common orthopaedic trauma procedures and fixation concepts.</p>
+      <a href="#about">Explore topics →</a>
+    </div>
+    <div class="card">
+      <h3>Implant Education</h3>
+      <p>Discover orthopaedic implants, their terminology and general applications.</p>
+      <a href="#about">Explore topics →</a>
+    </div>
+  </div>
+</section>
+
+<section id="theatre">
+  <div class="section-heading">
+    <h2>Theatre & Surgical Team Education</h2>
+    <p>Learning resources for the people behind every procedure.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Instrument Knowledge</h3>
+      <p>Understand common orthopaedic surgical instruments and their purposes.</p>
+    </div>
+    <div class="card">
+      <h3>Theatre Preparation</h3>
+      <p>Explore equipment terminology, preparation concepts and checklists.</p>
+    </div>
+    <div class="card">
+      <h3>Surgical Team Learning</h3>
+      <p>Educational resources for surgeons, nurses and theatre professionals.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-heading">
+    <h2>About TraumaGuide</h2>
+  </div>
+  <p>
+    TraumaGuide aims to make orthopaedic trauma education
+    more accessible through structured learning resources,
+    practical knowledge and professional development.
+  </p>
+  <br>
+  <div class="notice">
+    <strong>Educational disclaimer:</strong>
+    TraumaGuide is an independent educational initiative.
+    Its content is for learning purposes and is not a substitute
+    for clinical training, professional judgement or institutional protocols.
+  </div>
+</section>
 </main>
-<script>
-const modules=[
-{id:'tibia',title:'Tibial intramedullary nailing',desc:'Procedure overview, anatomy, indications and theatre education.',icon:'🦴',tags:['surgeon','theatre','anatomy'],label:'Featured module'},
-{id:'femur',title:'Femoral intramedullary nailing',desc:'Femoral anatomy, fracture concepts and implant familiarisation.',icon:'🦿',tags:['surgeon','theatre','anatomy'],label:'Coming next'},
-{id:'radius',title:'Distal radius fixation',desc:'Wrist anatomy, fracture patterns and plate-system education.',icon:'✋',tags:['surgeon','theatre','anatomy'],label:'Planned'},
-{id:'ankle',title:'Ankle fracture fixation',desc:'Ankle anatomy, fracture concepts and fixation principles.',icon:'🦶',tags:['surgeon','theatre','anatomy'],label:'Planned'},
-{id:'instruments',title:'Trauma instrument library',desc:'Learn instrument names, general functions and terminology.',icon:'🛠️',tags:['theatre'],label:'Theatre Academy'},
-{id:'anatomy',title:'Lower-limb anatomy',desc:'Foundational bones, joints, soft tissues, nerves and vessels.',icon:'📘',tags:['surgeon','theatre','anatomy'],label:'Anatomy Library'}
-];
-const pages=[
-['Overview',`<h3>What is the procedure?</h3><p>Tibial intramedullary nailing is an established method of internal fixation used in selected tibial shaft fractures. An intramedullary implant is positioned within the medullary canal to support fracture stabilisation.</p><div class="callout"><b>Learning objective</b><br>Understand the purpose of the procedure, relevant anatomy, implant concepts and the roles of the multidisciplinary theatre team.</div><h3>Learning outcomes</h3><ul><li>Describe the broad purpose of intramedullary fixation.</li><li>Identify key anatomical regions relevant to tibial trauma education.</li><li>Recognise common implant and instrumentation categories.</li><li>Discuss limitations and potential complications with a qualified clinician.</li></ul>`],
-['Anatomy',`<h3>Relevant anatomy — study guide</h3><p>Review the tibia and fibula, proximal and distal tibiofibular joints, knee and ankle relationships, surrounding muscle compartments, and neurovascular structures.</p><div class="two"><div class="mini"><b>Osseous anatomy</b><span>Tibial plateau, shaft, metaphysis, plafond and malleolar region.</span></div><div class="mini"><b>Soft tissues</b><span>Anterior, lateral, superficial posterior and deep posterior compartments.</span></div><div class="mini"><b>Neurovascular structures</b><span>Understand the regional course and clinical relevance of major nerves and vessels.</span></div><div class="mini"><b>Joint relationships</b><span>Consider knee and ankle alignment and associated articular injury.</span></div></div><p><b>Study prompt:</b> Use a validated anatomy atlas to locate these structures and discuss their clinical relevance with a clinical educator.</p>`],
-['Indications',`<h3>Indications — educational overview</h3><p>Intramedullary fixation may be considered for selected tibial shaft fractures. The decision depends on the fracture pattern, soft-tissue condition, patient factors, associated injuries and the treating surgeon's assessment.</p><ul><li>Review fracture location, morphology and stability considerations.</li><li>Assess soft-tissue injury and the overall clinical context.</li><li>Consider associated articular extension and other injuries.</li><li>Compare available fixation strategies using current evidence and specialist guidance.</li></ul><div class="callout">This summary is not a patient-selection checklist. Indications must be determined by the treating orthopaedic team.</div>`],
-['Limitations & risks',`<h3>Limitations and potential complications</h3><p>Outcomes are influenced by injury severity, fracture morphology, soft-tissue damage, alignment, implant factors and patient-specific considerations.</p><ul><li>Malalignment or loss of reduction.</li><li>Delayed union, nonunion or malunion.</li><li>Infection and wound complications.</li><li>Implant-related problems or failure.</li><li>Knee or other regional pain and functional symptoms.</li><li>Neurovascular or compartment-related complications associated with the injury or its management.</li></ul><p>Use current peer-reviewed literature and local protocols when studying complication rates and prevention strategies.</p>`],
-['Implants & instruments',`<h3>Instrument and implant familiarisation</h3><p>Learn the names and general purposes of the components used in an intramedullary nailing system. Exact components, compatibility and use vary by manufacturer and system.</p><div class="two"><div class="mini"><b>Implant categories</b><span>Intramedullary nail, locking screws, end cap and system-specific components.</span></div><div class="mini"><b>Instrument categories</b><span>Entry instruments, guidewires, reaming instruments, insertion instruments, targeting equipment and drivers.</span></div><div class="mini"><b>Measurement concepts</b><span>Understand the role of system-specific measurement tools and markings.</span></div><div class="mini"><b>Set familiarity</b><span>Learn approved tray layout, component names and manufacturer documentation.</span></div></div><div class="callout"><b>Theatre learning task:</b> With an approved training set and educator, identify each component by its correct name and match it to the manufacturer's current documentation.</div>`],
-['Theatre learning',`<h3>Theatre team learning pathway</h3><p>This section supports equipment familiarity and team communication. It is not an operative checklist and does not replace the hospital's approved count, sterile processing or preparation procedures.</p><ul><li>Review the planned procedure and confirm the correct approved system information is available.</li><li>Learn the names and categories of instruments in the relevant set.</li><li>Understand implant packaging, traceability and documentation concepts.</li><li>Review sterile processing and device handling requirements using local policy and manufacturer instructions.</li><li>Use team briefings and the institution's approved checklist.</li></ul>`],
-['References',`<h3>Evidence and review record</h3><p>Before this module is published for professional use, a qualified orthopaedic clinician must review it and the content team must attach current, verifiable sources.</p><ul><li>Current manufacturer instructions for use and surgical technique documents, used only with permission where required.</li><li>Peer-reviewed orthopaedic trauma literature.</li><li>Recognised anatomy references.</li><li>Applicable institutional and professional guidance.</li></ul><div class="callout"><b>Prototype status:</b> Introductory draft — not yet clinically reviewed. Reviewer, references and last-reviewed date must be completed before release.</div>`]
-];
-let currentFilter='all';const cards=document.getElementById('cards');const search=document.getElementById('search');
-function render(){const q=search.value.toLowerCase();const found=modules.filter(m=>(currentFilter==='all'||m.tags.includes(currentFilter))&&(m.title+' '+m.desc+' '+m.label).toLowerCase().includes(q));cards.innerHTML=found.length?found.map(m=>`<button class="card" data-id="${m.id}"><span class="ico">${m.icon}</span><h3>${m.title}</h3><p>${m.desc}</p><span class="tag">${m.label}</span></button>`).join(''):'<div class="empty">No modules match that search. Try another term.</div>';cards.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>openModule(b.dataset.id)));}
-function openModule(id){const m=modules.find(x=>x.id===id);if(!m)return;document.getElementById('home').style.display='none';const panel=document.getElementById('module');panel.classList.add('show');document.getElementById('moduleTitle').textContent=m.title;document.getElementById('moduleSub').textContent=m.id==='tibia'?'Foundational educational module • Draft for clinical review':'Planned learning module';const nav=document.getElementById('moduleNav'),content=document.getElementById('moduleContent');let selected=0;function draw(){nav.innerHTML=pages.map((p,i)=>`<button class="${i===selected?'active':''}" data-page="${i}">${p[0]}</button>`).join('');content.innerHTML=pages[selected][1];nav.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{selected=+b.dataset.page;draw()}));}draw();window.scrollTo({top:0,behavior:'smooth'});}
-document.getElementById('back').addEventListener('click',()=>{document.getElementById('module').classList.remove('show');document.getElementById('home').style.display='block';window.scrollTo({top:0,behavior:'smooth'});});document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');currentFilter=t.dataset.filter;render()}));search.addEventListener('input',render);document.getElementById('clear').addEventListener('click',()=>{search.value='';render()});render();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script></body></html>
+
+<footer>
+  <div class="logo">Trauma<span>Guide</span></div>
+  <p>Advancing Orthopaedic Trauma Knowledge.</p>
+  <p>Independent medical education initiative.</p>
+  <p>© 2026 TraumaGuide. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
